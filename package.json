@@ -1,5 +1,5 @@
 {
-  "name": "parent-group-site-template",
+  "name": "parent-teacher-group-site",
   "private": true,
   "description": "A static website for a school parent group (PTA, PTO, PTC): pages, news, programs, and a merged school calendar, generated from one config file.",
   "license": "MIT",

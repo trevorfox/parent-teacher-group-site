@@ -1,6 +1,6 @@
-# Parent group site template
+# Parent-teacher group site
 
-A static website for a school parent group (PTA, PTO, PTC): a home page, family
+A website template for a school parent-teacher group (PTA, PTO, PTC): a home page, family
 and teacher pages, news, programs, meeting minutes, supply lists, and a calendar
 that merges the school's feed with your own events.
 
