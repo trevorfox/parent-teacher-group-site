@@ -1,0 +1,38 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/calendar.ics",
+      "destination": "/api/calendar?format=ics"
+    },
+    {
+      "source": "/calendar-:only.ics",
+      "destination": "/api/calendar?format=ics&only=:only"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.example.org"
+        }
+      ],
+      "destination": "https://example.org/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.example.org"
+        }
+      ],
+      "destination": "https://example.org/:path*",
+      "permanent": true
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+---
+title: Fundraising — {{org.name}}
+description: Ways to support {{school.name}} — donate, double your gift with an employer match, and earn money for the school while you shop.
+nav: fundraising
+---
+  <main id="main">
+
+    <!-- ============ HEAD (white, brief) ============ -->
+    <section class="block block--white" aria-labelledby="fund-title">
+      <div class="wrap">
+        <p class="kicker kicker--blue">Support {{school.nameShort}}</p>
+        <h1 id="fund-title" class="section-title">Fundraising</h1>
+        <p class="lead">
+          There are three ways to help: give directly, have your gift matched at work,
+          or let your everyday shopping earn for {{school.nameShort}}. Most of
+          what&rsquo;s on this page costs you nothing beyond a few minutes of setup.
+        </p>
+        <!-- One box per code a family has to type somewhere. Copy an <li> to add
+             another; the Copy button appears on its own when script.js loads. -->
+        <ul class="idboard" aria-label="{{org.nameShort}} codes and IDs">
+          <li class="idbox">
+            <p class="idbox__label">Office Depot school ID</p>
+            <p class="idbox__code">{{fundraising.officeDepotId}}</p>
+            <div class="idbox__actions">
+              <button type="button" class="idbox__copy" data-copy="{{fundraising.officeDepotId}}" data-id="office-depot" hidden>Copy</button>
+              <a class="idbox__more" href="#office-depot">How it works</a>
+            </div>
+          </li>
+          <li class="idbox">
+            <p class="idbox__label">{{org.abbrev}} tax ID (EIN)</p>
+            <p class="idbox__code">00-0000000</p>
+            <div class="idbox__actions">
+              <button type="button" class="idbox__copy" data-copy="00-0000000" data-id="tax-id" hidden>Copy</button>
+              <a class="idbox__more" href="#match">For matching forms</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ GIVE DIRECTLY (green) ============ -->
+    <section class="block block--green" aria-labelledby="give-title">
+      <div class="wrap">
+        <p class="kicker kicker--ongreen">Give directly</p>
+        <h2 id="give-title" class="section-title section-title--light">The Fun Run is our big one.</h2>
+        <p class="lead lead--light lead--wide">
+          [Replace: a few sentences about your main fundraiser and what it pays for.]
+        </p>
+        <div class="ways">
+          <div class="way">
+            <p class="way__num" aria-hidden="true">01</p>
+            <h3>Donate online</h3>
+            <p>Give any amount. Every dollar goes to {{school.nameShort}} students.</p>
+            <a class="way__link" href="{{links.donate}}" target="_blank" rel="noopener">Donate <span aria-hidden="true">&#8599;</span></a>
+          </div>
+          <div class="way">
+            <p class="way__num" aria-hidden="true">02</p>
+            <h3>Learn how it works</h3>
+            <p>See how the day runs, what the money pays for, and how to sign up.</p>
+            <a class="way__link" href="/programs/fun-run">About the Fun Run <span aria-hidden="true">&#8594;</span></a>
+          </div>
+          <div class="way">
+            <p class="way__num" aria-hidden="true">03</p>
+            <h3>Prefer to write a check?</h3>
+            <p>
+              Make it out to <strong>{{org.name}}</strong> and send it to school with
+              your student, or drop it at the front office.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The sponsor list lives in content/programs/fun-run.md -->
+    <!-- sponsors program="fun-run" -->
+
+    <!-- ============ EMPLOYER MATCH (white) ============ -->
+    <section id="match" class="block block--white" aria-labelledby="match-title">
+      <div class="wrap">
+        <p class="kicker kicker--blue">Double your gift</p>
+        <h2 id="match-title" class="section-title">Your employer may match it.</h2>
+        <p class="lead lead--wide">
+          Plenty of large employers match what their people give to schools, which turns a
+          $50 donation into $100 at no extra cost to you. It is usually a short form on
+          your company&rsquo;s giving portal, and most families never think to check.
+        </p>
+        <div class="match-grid">
+          <div>
+            <h3>How to do it</h3>
+            <ol class="match-steps">
+              <li><a href="{{links.donate}}" target="_blank" rel="noopener">Donate</a> and keep the emailed receipt.</li>
+              <li>Open your company&rsquo;s giving or volunteering portal.</li>
+              <li>Search for <strong>{{org.nameShort}}</strong>, or enter our tax ID <strong>00-0000000</strong>.</li>
+              <li>Submit the receipt. The match comes straight to the {{org.abbrev}}.</li>
+            </ol>
+          </div>
+          <div>
+            <h3>Employers we know match</h3>
+            <p class="match-list">
+              [Replace: Employer One &middot; Employer Two &middot; Employer Three]
+            </p>
+            <p class="match-note">
+              Not on the list? It is still worth a look, since many companies match and
+              never advertise it.
+              <a href="mailto:{{org.email}}?subject=Employer%20donation%20match">Email us</a>
+              if you need anything from the {{org.abbrev}} to finish a form.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EARN WHILE YOU SHOP (blue) ============ -->
+    <section class="block block--blue" aria-labelledby="earn-title">
+      <div class="wrap">
+        <p class="kicker kicker--onblue">No extra cost</p>
+        <h2 id="earn-title" class="section-title section-title--light">Earn for {{school.nameShort}} while you shop.</h2>
+        <p class="lead lead--light lead--wide">
+          These programs send money to {{school.nameShort}} based on shopping you were
+          going to do anyway. Each one takes a few minutes to set up once.
+        </p>
+
+        <div class="event-grid event-grid--2up">
+          <article class="event-card" id="office-depot">
+            <h4>Office Depot 5% Back to Schools</h4>
+            <p>
+              Give the school ID <strong>{{fundraising.officeDepotId}}</strong> when you pay,
+              in any store or on a phone order, and {{school.nameShort}} earns credits
+              worth 5% of your qualifying purchase.
+            </p>
+            <a class="program-card__more" href="/supplies#shopping-helps">How it works <span aria-hidden="true">&#8594;</span></a>
+          </article>
+
+          <article class="event-card">
+            <h4>[Your grocery rewards program]</h4>
+            <p>
+              [Replace: how to link a store rewards card to the {{org.abbrev}}, and any
+              code families need. Copy this card for each program you take part in.]
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FUNDRAISING NEWS (white) ============ -->
+    <section class="block block--white" aria-labelledby="fund-news-title">
+      <div class="wrap">
+        <p class="kicker kicker--blue">Latest</p>
+        <h2 id="fund-news-title" class="section-title">Fundraising news.</h2>
+        <p class="lead lead--wide">Results and upcoming fundraisers, straight from the {{org.abbrev}}.</p>
+        <!-- latest-posts tag="fundraising" count="3" -->
+      </div>
+    </section>
+
+    <!-- ============ WHERE IT GOES (green) ============ -->
+    <section class="block block--green" aria-labelledby="where-title">
+      <div class="wrap">
+        <p class="kicker kicker--ongreen">Where it goes</p>
+        <h2 id="where-title" class="section-title section-title--light">Every dollar stays at {{school.nameShort}}.</h2>
+        <p class="lead lead--light lead--wide">
+          The {{org.abbrev}} is run by parents and staff. What we raise pays for
+          enrichment programs, field trips, classroom funds, staff appreciation, and the
+          events that bring our community together &mdash; for every student enrolled at
+          the school, not just the ones whose families can give.
+        </p>
+        <p class="hero__actions" style="justify-content: flex-start; margin-top: 1.6rem;">
+          <a class="btn btn--white" href="/programs">See what we fund</a>
+          <a class="btn btn--white" href="/minutes">Read the minutes</a>
+        </p>
+      </div>
+    </section>
+
+  </main>

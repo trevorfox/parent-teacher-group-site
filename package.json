@@ -1,0 +1,19 @@
+{
+  "name": "parent-group-site-template",
+  "private": true,
+  "description": "A static website for a school parent group (PTA, PTO, PTC): pages, news, programs, and a merged school calendar, generated from one config file.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build:config": "node scripts/build-config.mjs",
+    "build:pages": "node scripts/build-pages.mjs",
+    "build:blog": "node scripts/build-blog.mjs",
+    "build:programs": "node scripts/build-programs.mjs",
+    "build:site": "npm run build:config && npm run build:pages && npm run build:blog && npm run build:programs",
+    "snapshot": "node scripts/snapshot.mjs",
+    "test": "node scripts/verify-pages.test.mjs && node scripts/page-data.test.mjs && node scripts/build-blog.test.mjs && node scripts/build-programs.test.mjs && node scripts/supplies-page.test.mjs && node scripts/calendar-categorize.test.mjs",
+    "serve": "npx serve ."
+  }
+}

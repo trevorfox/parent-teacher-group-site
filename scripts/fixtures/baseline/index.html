@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Example Elementary PTA</title>
+  <meta name="description" content="Example Elementary PTA — a parent- and staff-run nonprofit supporting every student through volunteering and fundraising. Sign up for updates and get involved." />
+  <link rel="canonical" href="https://example.org/" />
+  <meta property="og:title" content="Example Elementary PTA" />
+  <meta property="og:description" content="A parent- and staff-run nonprofit supporting every student at Example Elementary. Volunteer, give, and stay in the loop." />
+  <meta property="og:image" content="https://example.org/assets/logo.svg" />
+  <meta property="og:url" content="https://example.org/" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#2F67B2" />
+  <link rel="icon" href="/assets/logo.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="topbar">
+    <div class="utility">
+      <div class="utility__inner">
+        <div class="menu" data-menu>
+          <button type="button" class="menu__btn" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu">
+            <span class="i-translate" aria-hidden="true">文A</span>
+            <span class="menu__btn-label">Language</span>
+            <span class="menu__caret" aria-hidden="true"></span>
+          </button>
+          <div class="menu__panel" id="lang-menu" role="menu" aria-labelledby="lang-btn" hidden>
+            <p class="menu__title" aria-hidden="true">Translate this page</p>
+            <button type="button" role="menuitemradio" aria-checked="true" class="menu__item" data-lang="en">English</button>
+            <button type="button" role="menuitemradio" aria-checked="false" class="menu__item" data-lang="es">Español</button>
+            <div class="menu__more">
+              <label class="menu__morelabel">More languages</label>
+              <div id="google_translate_element"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu" data-menu>
+          <button type="button" class="menu__btn" id="a11y-btn" aria-haspopup="true" aria-expanded="false" aria-controls="a11y-menu">
+            <span class="i-access" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><circle cx="12" cy="3.6" r="2.1"/><path d="M20 8.2c0 .6-.5 1-1 1h-3.9V21c0 .6-.5 1-1.1 1s-1-.4-1-1v-6h-2v6c0 .6-.5 1-1.1 1s-1-.4-1-1V9.2H5c-.6 0-1-.4-1-1s.4-1 1-1h14c.6 0 1 .4 1 1z"/></svg>
+            </span>
+            <span class="menu__btn-label">Accessibility</span>
+            <span class="menu__caret" aria-hidden="true"></span>
+          </button>
+          <div class="menu__panel menu__panel--a11y" id="a11y-menu" role="group" aria-labelledby="a11y-btn" hidden>
+            <div class="a11y-row" role="group" aria-label="Text size">
+              <span class="a11y-row__label">Text size</span>
+              <span class="a11y-sizes">
+                <button type="button" class="a11y-size" data-font="down" aria-label="Decrease text size">A<span class="a11y-minus">−</span></button>
+                <button type="button" class="a11y-size" data-font="reset" aria-label="Reset text size">A</button>
+                <button type="button" class="a11y-size a11y-size--big" data-font="up" aria-label="Increase text size">A<span class="a11y-plus">+</span></button>
+              </span>
+            </div>
+            <button type="button" class="a11y-opt" data-toggle="contrast" aria-pressed="false"><span>High contrast</span><span class="a11y-switch" aria-hidden="true"></span></button>
+            <button type="button" class="a11y-opt" data-toggle="links" aria-pressed="false"><span>Underline links</span><span class="a11y-switch" aria-hidden="true"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Example PTA home">
+        <img class="brand__logo" src="/assets/logo.svg" width="200" height="200" alt="Example Elementary" />
+        <span class="brand__text">PTA</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <ul id="nav-list" class="nav-list">
+          <li class="nav-item has-sub">
+            <button class="nav-sub-toggle" aria-expanded="false" aria-controls="sub-families">
+              Families <span class="caret" aria-hidden="true"></span>
+            </button>
+            <ul id="sub-families" class="nav-sub">
+              <li><a href="/families">All family links</a></li>
+              <li><a href="/families/faq">Family FAQ</a></li>
+              <li><a href="/supplies">School supplies</a></li>
+              <li><a href="/volunteer">Volunteer</a></li>
+            </ul>
+          </li>
+          <li><a href="/teachers">Teachers</a></li>
+          <li><a href="/programs">Programs</a></li>
+          <li><a href="/fundraising">Fundraising</a></li>
+          <li><a href="/calendar">Calendar</a></li>
+          <li><a href="/blog">News</a></li>
+          <li><a href="/minutes">Minutes</a></li>
+          <li><a class="nav-cta" href="https://example.org/donate" target="_blank" rel="noopener">Donate</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+<main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">Example Elementary</p>
+        <h1 id="hero-title" class="hero__title">
+          Example PTA
+        </h1>
+        <p class="hero__lede">
+          A parent- and staff-run nonprofit that supports every student at
+          Example Elementary — powered by volunteers, funded by community.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--blue" href="#get-involved">Sign up for updates</a>
+          <a class="btn btn--green" href="https://example.org/donate" target="_blank" rel="noopener">
+            Donate <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <a class="hero__next" href="/calendar?show=ptc" data-next-meeting-swap="Next PTA meeting: {day}, {time}" data-next-meeting-show hidden>PTA meetings</a>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT (white) ============ -->
+    <section id="about" class="block block--white" aria-labelledby="about-title">
+      <div class="wrap">
+        <p class="kicker kicker--blue">About the PTA</p>
+        <div class="about-grid">
+          <div>
+            <h2 id="about-title" class="section-title">Family &amp; community support for every student.</h2>
+            <div class="mission">
+              <p class="mission__label">Our mission</p>
+              <p class="mission__text">
+                <span>Support learning.</span>
+                <span>Support teaching.</span>
+                <span>Support community.</span>
+              </p>
+            </div>
+          </div>
+          <div class="about-body">
+            <p class="lead">
+              The Example Elementary PTA is a nonprofit
+              organized to provide family and community
+              support for the students, staff, and administration of Example Elementary
+              Elementary.
+            </p>
+            <p>
+              We enhance and supplement every student's education through
+              <strong>volunteerism and fundraising</strong> — paying for enrichment
+              programs and opportunities that reach all students enrolled at the school.
+            </p>
+            <p class="fineprint">
+              Noncommercial, nonsectarian, and nonpartisan. Voting membership is open
+              to all parents and guardians of Example Elementary students; school staff are
+              honorary members.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT WE DO (blue block) ============ -->
+    <section id="what-we-do" class="block block--blue" aria-labelledby="do-title">
+      <div class="wrap">
+        <p class="kicker kicker--onblue">What We Do</p>
+        <h2 id="do-title" class="section-title section-title--light">Where your support goes.</h2>
+        <p class="lead lead--light lead--wide">
+          Every dollar we raise and every hour volunteered goes right back to the
+          classroom. Here's some of what the PTA funds and hosts each year.
+        </p>
+
+        <h3 class="subhead subhead--light">Programs &amp; enrichment we fund</h3>
+        <ul class="pill-list" aria-label="Programs and enrichment funded by the PTA">
+          <li class="pill"><a href="/programs/field-trips">Field Trips</a></li>
+          <li class="pill">Staff Appreciation</li>
+        </ul>
+
+        <h3 class="subhead subhead--light">Events we host</h3>
+        <div class="event-grid">
+          <article class="event-card">
+            <h4>Fun Run</h4>
+            <p>Our biggest fundraiser of the year. The whole school runs laps, families pledge, and the total sets the budget.</p>
+            <a class="program-card__more" href="/programs/fun-run">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="event-card">
+            <h4>Family Night</h4>
+            <p>An evening of games and food that brings the whole school together.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GET INVOLVED + SIGNUP (green block) ============ -->
+    <section id="get-involved" class="block block--green" aria-labelledby="involved-title">
+      <div class="wrap">
+        <p class="kicker kicker--ongreen">Get Involved</p>
+        <h2 id="involved-title" class="section-title section-title--light">
+          There's a place for everyone — an hour or a whole season.
+        </h2>
+
+        <div class="ways">
+          <div class="way">
+            <span class="way__num">01</span>
+            <h3>Come to a meeting</h3>
+            <p>The PTA meets monthly, September through June. All parents, guardians, and staff are welcome — no commitment required.</p>
+            <a class="way__link" href="/calendar?show=ptc">See meeting dates <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="way">
+            <span class="way__num">02</span>
+            <h3>Volunteer</h3>
+            <p>Help at an event, lead a project, or lend a hand once. Every bit keeps our programs running.</p>
+            <a class="way__link" href="/volunteer">How to volunteer <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="way">
+            <span class="way__num">03</span>
+            <h3>Give</h3>
+            <p>Donations fund every program and event on this page. A little from a lot of families adds up fast.</p>
+            <a class="way__link" href="https://example.org/donate" target="_blank" rel="noopener">Donate <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="signup" id="signup">
+          <div class="signup__intro">
+            <h3>Stay in the loop</h3>
+            <p>Tell us you're interested and we'll keep you posted on meetings, events, and volunteer opportunities. No spam, just school news.</p>
+          </div>
+          <div class="signup__form">
+            <iframe class="signup__iframe"
+              title="Example PTA interest and newsletter sign-up form"
+              src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+              width="100%" height="1200" loading="lazy">Loading the sign-up form…</iframe>
+            <p class="signup__fallback">
+              Form not loading?
+              <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"
+                 target="_blank" rel="noopener">Open the sign-up form in a new tab ↗</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MEETINGS (white) ============ -->
+    <section id="meetings" class="block block--white" aria-labelledby="meetings-title">
+      <div class="wrap meetings-wrap">
+        <div>
+          <p class="kicker kicker--blue">Meetings &amp; Membership</p>
+          <h2 id="meetings-title" class="section-title">Everyone's invited to the table.</h2>
+          <p class="lead">
+            The PTA meets once a month from September through June. Come see what
+            we're working on, share an idea, or just listen in. Voting membership is
+            open to all Example Elementary parents and guardians — and there are no dues.
+          </p>
+        </div>
+        <div class="meeting-card">
+          <p class="meeting-card__label" data-next-meeting-swap="Next meeting">When we meet</p>
+          <p class="meeting-card__when"><b data-next-meeting-date>First Wednesday</b> <span data-next-meeting-swap="First Wednesday of every month">of every month</span></p>
+          <ul class="meeting-card__facts">
+            <li><span class="meeting-card__k">Time</span> 6:00–7:00 PM</li>
+            <li><span class="meeting-card__k">Season</span> September through June</li>
+          </ul>
+          <p class="meeting-card__fallback">
+            See this and every upcoming event on our
+            <a href="/calendar">full calendar →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONNECT (blue block) ============ -->
+    <section id="connect" class="block block--blue" aria-labelledby="connect-title">
+      <div class="wrap">
+        <p class="kicker kicker--onblue">Connect</p>
+        <h2 id="connect-title" class="section-title section-title--light">Stay in touch with your PTA.</h2>
+        <ul class="connect-grid" aria-label="Ways to connect with the PTA">
+          <li>
+            <a class="connect-card" href="mailto:board@example.org">
+              <span class="connect-card__icon" aria-hidden="true">✉</span>
+              <span class="connect-card__body">
+                <span class="connect-card__name">Email us</span>
+                <span class="connect-card__meta">board@example.org</span>
+              </span>
+              <span class="connect-card__arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a class="connect-card" href="https://example-elementary.example.org/" target="_blank" rel="noopener">
+              <span class="connect-card__icon" aria-hidden="true">⌂</span>
+              <span class="connect-card__body">
+                <span class="connect-card__name">School Website</span>
+                <span class="connect-card__meta">example-elementary.example.org</span>
+              </span>
+              <span class="connect-card__arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-brand">Example Elementary PTA</p>
+        <address class="footer-address">
+          100 Main St.<br />
+          Anytown, ST 00000
+        </address>
+        <a class="footer-social" href="mailto:board@example.org">board@example.org</a>
+        <ul class="social-row" aria-label="Example PTA on social media">
+          <li><a class="social-btn" href="https://www.facebook.com/examplepta" target="_blank" rel="noopener" aria-label="Example PTA on Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.45-4.93 8.45-9.94z"/></svg></a></li>
+        </ul>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/programs">Programs</a>
+        <a href="/calendar">Calendar</a>
+        <a href="/families">Families</a>
+        <a href="/teachers">Teachers</a>
+        <a href="/blog">News</a>
+        <a href="https://example.org/board" target="_blank" rel="noopener">Contacts <span aria-hidden="true">&#8599;</span></a>
+      </nav>
+      <p class="footer-note">
+        A parent- and staff-run nonprofit. The Example PTA is an independent organization and is not administered by the school district.
+      </p>
+    </div>
+    <p class="footer-copy">© <span id="year">2026</span> Example Elementary PTA, Inc.</p>
+  </footer>
+
+  <!-- Google Translate init -->
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>

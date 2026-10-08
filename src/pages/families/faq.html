@@ -1,0 +1,151 @@
+---
+title: Family FAQ — {{org.name}}
+description: Answers to the questions new {{school.nameShort}} families ask most — drop-off, pickup, meals, absences, and the {{org.abbrev}}.
+nav: faq
+scripts:
+  - src: /faq.js
+---
+  <main id="main">
+
+    <section class="block block--white" aria-labelledby="faq-title">
+      <div class="wrap">
+        <p class="kicker kicker--blue">For {{school.nameShort}} Families</p>
+        <h1 id="faq-title" class="section-title">Family FAQ</h1>
+        <p class="lead">
+          The questions new {{school.nameShort}} families ask us most, organized so you
+          can find your answer fast.
+        </p>
+        <p class="faq-updated">[Replace: Last updated Month Day, Year] · <a href="/families">← All family links</a></p>
+
+        <nav class="faq-toc" aria-label="Jump to a section">
+          <a href="#getting-there">Getting there &amp; home</a>
+          <a href="#when-somethings-off">When something's off</a>
+          <a href="#food">Food</a>
+          <a href="#the-group">The {{org.abbrev}}</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Each details block with class qa-item is one question. Give it a unique id: that
+         is its shareable link (/families/faq#drop-off). The search-engine FAQ data
+         is generated from these blocks at build time, so there is nothing else to
+         keep in step. Answers below are placeholders. -->
+
+    <section class="block block--white" id="getting-there" aria-labelledby="getting-there-title">
+      <div class="wrap">
+        <p class="kicker kicker--blue">Getting There &amp; Home</p>
+        <h2 id="getting-there-title" class="section-title">Drop-off, pickup, and the walk to school.</h2>
+        <p class="src-tag src-tag--district">Straight from the school &amp; district</p>
+
+        <div class="qa">
+          <details class="qa-item" id="start-end-times">
+            <summary class="qa-q">What time does the school day start and end?</summary>
+            <div class="qa-a prose">
+              <p>[Replace with your school's answer.] Include when doors open, the first bell, and dismissal.</p>
+            </div>
+          </details>
+
+          <details class="qa-item" id="drop-off">
+            <summary class="qa-q">How does drop-off work?</summary>
+            <div class="qa-a prose">
+              <p>[Replace with your school's answer.]</p>
+              <ul>
+                <li><strong>Stay in the car.</strong> If you need to get out, park in a designated spot instead.</li>
+                <li><strong>Watch the crosswalk.</strong> Go slowly and stop for people crossing.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="qa-item" id="pickup-change">
+            <summary class="qa-q">How do I change how my child gets home today?</summary>
+            <div class="qa-a prose">
+              <p>[Replace with your school's answer.] Include the office phone number and the cutoff time.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block--white" id="when-somethings-off" aria-labelledby="when-somethings-off-title">
+      <div class="wrap">
+        <p class="kicker kicker--blue">When Something's Off</p>
+        <h2 id="when-somethings-off-title" class="section-title">Absences, illness, and who to call.</h2>
+        <p class="src-tag src-tag--district">Straight from the school &amp; district</p>
+
+        <div class="qa">
+          <details class="qa-item" id="absence">
+            <summary class="qa-q">How do I report an absence?</summary>
+            <div class="qa-a prose">
+              <p>[Replace with your school's answer.]</p>
+            </div>
+          </details>
+
+          <details class="qa-item" id="too-sick">
+            <summary class="qa-q">How do I know if my child is too sick for school?</summary>
+            <div class="qa-a prose">
+              <p>[Replace with your school's answer.]</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block--white" id="food" aria-labelledby="food-title">
+      <div class="wrap">
+        <p class="kicker kicker--blue">Food</p>
+        <h2 id="food-title" class="section-title">Breakfast, lunch, and allergies.</h2>
+        <p class="src-tag src-tag--district">Straight from the school &amp; district</p>
+
+        <div class="qa">
+          <details class="qa-item" id="meals">
+            <summary class="qa-q">How do school meals work, and what do they cost?</summary>
+            <div class="qa-a prose">
+              <p>[Replace with your school's answer.]</p>
+            </div>
+          </details>
+
+          <details class="qa-item" id="allergies">
+            <summary class="qa-q">My child has a food allergy. Who do I tell?</summary>
+            <div class="qa-a prose">
+              <p>[Replace with your school's answer.]</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block--white" id="the-group" aria-labelledby="the-group-title">
+      <div class="wrap">
+        <p class="kicker kicker--blue">The {{org.abbrev}}</p>
+        <h2 id="the-group-title" class="section-title">Who we are, and how to get involved.</h2>
+        <p class="src-tag src-tag--ptc">From the {{org.nameShort}} — independent of the school district</p>
+
+        <div class="qa">
+          <details class="qa-item qa-item--ptc" id="group-what">
+            <summary class="qa-q">What is the {{org.abbrev}}?</summary>
+            <div class="qa-a prose">
+              <p>The {{org.nameShort}} is the parent- and staff-run nonprofit behind many of the programs and events at {{school.nameShort}}. <a href="/programs">See what we fund <span aria-hidden="true">→</span></a></p>
+              <p>It is an <strong>independent organization</strong>, not administered by the school district. There are no dues, and every parent and guardian is already a member.</p>
+            </div>
+          </details>
+
+          <details class="qa-item qa-item--ptc" id="group-meetings">
+            <summary class="qa-q">When and where are {{org.abbrev}} meetings?</summary>
+            <div class="qa-a prose">
+              <p>The {{meetings.day}} of the month, <strong>{{meetings.time}}</strong>, with a {{meetings.online}} option. Everyone is welcome.</p>
+              <p><a href="/calendar?show=ptc">{{org.abbrev}} &amp; school calendar <span aria-hidden="true">→</span></a></p>
+            </div>
+          </details>
+
+          <details class="qa-item qa-item--ptc" id="group-volunteer">
+            <summary class="qa-q">How do I get involved or volunteer?</summary>
+            <div class="qa-a prose">
+              <p>Come to one meeting, help at one event, or take on a whole project. All of it helps.</p>
+              <p><a href="{{links.signupForm}}" target="_blank" rel="noopener">Join the email list <span aria-hidden="true">↗</span></a> · <a href="/volunteer">How volunteering works <span aria-hidden="true">→</span></a></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>

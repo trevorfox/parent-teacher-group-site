@@ -1,0 +1,187 @@
+---
+title: {{org.name}}
+description: {{org.name}} — a parent- and staff-run nonprofit supporting every student through volunteering and fundraising. Sign up for updates and get involved.
+og_title: {{org.name}}
+og_description: A parent- and staff-run nonprofit supporting every student at {{school.name}}. Volunteer, give, and stay in the loop.
+---
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">{{school.name}}</p>
+        <h1 id="hero-title" class="hero__title">
+          {{org.nameShort}}
+        </h1>
+        <p class="hero__lede">
+          A parent- and staff-run nonprofit that supports every student at
+          {{school.name}} — powered by volunteers, funded by community.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--blue" href="#get-involved">Sign up for updates</a>
+          <a class="btn btn--green" href="{{links.donate}}" target="_blank" rel="noopener">
+            Donate <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <a class="hero__next" href="/calendar?show=ptc" data-next-meeting-swap="Next {{org.abbrev}} meeting: {day}, {time}" data-next-meeting-show hidden>{{org.abbrev}} meetings</a>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT (white) ============ -->
+    <section id="about" class="block block--white" aria-labelledby="about-title">
+      <div class="wrap">
+        <p class="kicker kicker--blue">About the {{org.abbrev}}</p>
+        <div class="about-grid">
+          <div>
+            <h2 id="about-title" class="section-title">Family &amp; community support for every student.</h2>
+            <div class="mission">
+              <p class="mission__label">Our mission</p>
+              <p class="mission__text">
+                <span>Support learning.</span>
+                <span>Support teaching.</span>
+                <span>Support community.</span>
+              </p>
+            </div>
+          </div>
+          <div class="about-body">
+            <p class="lead">
+              The {{org.name}} is a nonprofit
+              organized to provide family and community
+              support for the students, staff, and administration of {{school.nameShort}}
+              Elementary.
+            </p>
+            <p>
+              We enhance and supplement every student's education through
+              <strong>volunteerism and fundraising</strong> — paying for enrichment
+              programs and opportunities that reach all students enrolled at the school.
+            </p>
+            <p class="fineprint">
+              Noncommercial, nonsectarian, and nonpartisan. Voting membership is open
+              to all parents and guardians of {{school.nameShort}} students; school staff are
+              honorary members.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT WE DO (blue block) ============ -->
+    <section id="what-we-do" class="block block--blue" aria-labelledby="do-title">
+      <div class="wrap">
+        <p class="kicker kicker--onblue">What We Do</p>
+        <h2 id="do-title" class="section-title section-title--light">Where your support goes.</h2>
+        <p class="lead lead--light lead--wide">
+          Every dollar we raise and every hour volunteered goes right back to the
+          classroom. Here's some of what the {{org.abbrev}} funds and hosts each year.
+        </p>
+
+        <!-- program-list -->
+      </div>
+    </section>
+
+    <!-- ============ GET INVOLVED + SIGNUP (green block) ============ -->
+    <section id="get-involved" class="block block--green" aria-labelledby="involved-title">
+      <div class="wrap">
+        <p class="kicker kicker--ongreen">Get Involved</p>
+        <h2 id="involved-title" class="section-title section-title--light">
+          There's a place for everyone — an hour or a whole season.
+        </h2>
+
+        <div class="ways">
+          <div class="way">
+            <span class="way__num">01</span>
+            <h3>Come to a meeting</h3>
+            <p>The {{org.abbrev}} meets monthly, September through June. All parents, guardians, and staff are welcome — no commitment required.</p>
+            <a class="way__link" href="/calendar?show=ptc">See meeting dates <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="way">
+            <span class="way__num">02</span>
+            <h3>Volunteer</h3>
+            <p>Help at an event, lead a project, or lend a hand once. Every bit keeps our programs running.</p>
+            <a class="way__link" href="/volunteer">How to volunteer <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="way">
+            <span class="way__num">03</span>
+            <h3>Give</h3>
+            <p>Donations fund every program and event on this page. A little from a lot of families adds up fast.</p>
+            <a class="way__link" href="{{links.donate}}" target="_blank" rel="noopener">Donate <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="signup" id="signup">
+          <div class="signup__intro">
+            <h3>Stay in the loop</h3>
+            <p>Tell us you're interested and we'll keep you posted on meetings, events, and volunteer opportunities. No spam, just school news.</p>
+          </div>
+          <div class="signup__form">
+            <iframe class="signup__iframe"
+              title="{{org.nameShort}} interest and newsletter sign-up form"
+              src="{{links.signupForm}}?embedded=true"
+              width="100%" height="1200" loading="lazy">Loading the sign-up form…</iframe>
+            <p class="signup__fallback">
+              Form not loading?
+              <a href="{{links.signupForm}}"
+                 target="_blank" rel="noopener">Open the sign-up form in a new tab ↗</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MEETINGS (white) ============ -->
+    <section id="meetings" class="block block--white" aria-labelledby="meetings-title">
+      <div class="wrap meetings-wrap">
+        <div>
+          <p class="kicker kicker--blue">Meetings &amp; Membership</p>
+          <h2 id="meetings-title" class="section-title">Everyone's invited to the table.</h2>
+          <p class="lead">
+            The {{org.abbrev}} meets once a month from September through June. Come see what
+            we're working on, share an idea, or just listen in. Voting membership is
+            open to all {{school.nameShort}} parents and guardians — and there are no dues.
+          </p>
+        </div>
+        <div class="meeting-card">
+          <p class="meeting-card__label" data-next-meeting-swap="Next meeting">When we meet</p>
+          <p class="meeting-card__when"><b data-next-meeting-date>{{meetings.day|cap}}</b> <span data-next-meeting-swap="{{meetings.day|cap}} of every month">of every month</span></p>
+          <ul class="meeting-card__facts">
+            <li><span class="meeting-card__k">Time</span> {{meetings.time}}</li>
+            <li><span class="meeting-card__k">Season</span> September through June</li>
+          </ul>
+          <p class="meeting-card__fallback">
+            See this and every upcoming event on our
+            <a href="/calendar">full calendar →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONNECT (blue block) ============ -->
+    <section id="connect" class="block block--blue" aria-labelledby="connect-title">
+      <div class="wrap">
+        <p class="kicker kicker--onblue">Connect</p>
+        <h2 id="connect-title" class="section-title section-title--light">Stay in touch with your {{org.abbrev}}.</h2>
+        <ul class="connect-grid" aria-label="Ways to connect with the {{org.abbrev}}">
+          <li>
+            <a class="connect-card" href="mailto:{{org.email}}">
+              <span class="connect-card__icon" aria-hidden="true">✉</span>
+              <span class="connect-card__body">
+                <span class="connect-card__name">Email us</span>
+                <span class="connect-card__meta">{{org.email}}</span>
+              </span>
+              <span class="connect-card__arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a class="connect-card" href="{{school.website}}" target="_blank" rel="noopener">
+              <span class="connect-card__icon" aria-hidden="true">⌂</span>
+              <span class="connect-card__body">
+                <span class="connect-card__name">School Website</span>
+                <span class="connect-card__meta">{{school.website|host}}</span>
+              </span>
+              <span class="connect-card__arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>

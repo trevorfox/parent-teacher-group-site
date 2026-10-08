@@ -1,0 +1,123 @@
+---
+title: School Supplies — {{org.name}}
+description: Your child's {{school.nameShort}} school supply list — find every item at Office Depot, or print the list with the school's 5% Back to Schools ID and shop in store.
+nav: supplies
+scripts:
+  - src: /supplies.js
+note_suffix: Supply lists come from the school's official published lists.
+---
+  <main id="main">
+    <div class="print-sheet">
+      <p class="print-sheet__school">{{school.name}} — <span data-print-grade></span> Supply List</p>
+      <p class="print-sheet__id">Give Office Depot school ID <strong>{{fundraising.officeDepotId}}</strong> at the register when you pay — {{school.nameShort}} earns 5% back in free supplies.</p>
+    </div>
+
+    <section class="block block--white supplies-head" aria-labelledby="supplies-title">
+      <div class="wrap">
+        <p class="kicker kicker--blue">School Supplies</p>
+        <h1 id="supplies-title" class="section-title">Get your school supplies, sorted.</h1>
+        <p class="lead">
+          Pick your child's grade to see the supply list. Tap any item to see it at
+          officedepot.com, then print your list and shop at any Office Depot store —
+          give {{school.nameShort}}'s school ID at the register and the school earns 5% back.
+        </p>
+        <p class="od-callout">
+          <span aria-hidden="true">🏷️</span> School ID for checkout:
+          <strong>{{fundraising.officeDepotId}}</strong> — every qualifying Office Depot purchase earns
+          {{school.nameShort}} 5% back. <a href="#shopping-helps">How it works ↓</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="block block--white grade-panels" aria-label="Supply lists by grade">
+      <div class="wrap">
+
+        <!-- One details block with class grade per grade. Each <li> is one item; supplies.js
+             turns its text into an Office Depot search link. Add data-q="…" to an
+             <li> when the plain text searches badly. These two lists are examples. -->
+
+        <!-- ============ KINDERGARTEN ============ -->
+        <details class="grade" id="kinder" data-grade="kinder">
+          <summary>Kindergarten</summary>
+          <div class="grade__body">
+            <p class="grade__subhead">Classroom supplies checklist</p>
+            <ul class="supply-list">
+              <li>1 Pack Crayons (24 Count)</li>
+              <li>2 Glue Sticks</li>
+              <li>1 Pack Washable Markers</li>
+              <li data-q="plastic 2 pocket folder">1 Folder <span class="item-note">Label it with your student's name.</span></li>
+              <li>1 Box Tissues</li>
+              <li data-q="kids headphones for school">1 Set Headphones</li>
+            </ul>
+            <p class="disclosure">Item links open a search at officedepot.com — to earn {{school.nameShort}}'s 5%, give school ID <strong>{{fundraising.officeDepotId}}</strong> when you pay in store (or on a phone order).</p>
+            <button type="button" class="btn btn--blue print-btn">Print this list <span aria-hidden="true">🖨</span></button>
+            <p class="donate-nudge">Supplies sorted! One more thing — <a href="#support">if you'd like, you can support the {{org.abbrev}} too.</a></p>
+          </div>
+        </details>
+
+        <!-- ============ 1ST / 2ND ============ -->
+        <details class="grade" id="grade12" data-grade="grade12">
+          <summary>1st &amp; 2nd Grade</summary>
+          <div class="grade__body">
+            <p class="grade__subhead">Classroom supplies checklist</p>
+            <ul class="supply-list">
+              <li>1 Pack #2 Pencils (12 Count)</li>
+              <li>1 Pack Crayons (24 Count)</li>
+              <li>2 Glue Sticks</li>
+              <li data-q="wide ruled spiral notebook">2 Spiral Notebooks</li>
+              <li>1 Pair Scissors</li>
+              <li>1 Pack Dry Erase Markers</li>
+            </ul>
+            <p class="disclosure">Item links open a search at officedepot.com — to earn {{school.nameShort}}'s 5%, give school ID <strong>{{fundraising.officeDepotId}}</strong> when you pay in store (or on a phone order).</p>
+            <button type="button" class="btn btn--blue print-btn">Print this list <span aria-hidden="true">🖨</span></button>
+            <p class="donate-nudge">Supplies sorted! One more thing — <a href="#support">if you'd like, you can support the {{org.abbrev}} too.</a></p>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <section id="support" class="block block--green supplies-support" aria-labelledby="support-title">
+      <div class="wrap">
+        <p class="kicker kicker--ongreen">Support the {{org.abbrev}}</p>
+        <h2 id="support-title" class="section-title section-title--light">Supplies are just the start.</h2>
+        <p class="lead lead--light">
+          If you'd like to support the {{org.nameShort}} directly, you can chip in here.
+          Donations fund enrichment programs, events, and classroom support for every
+          student. Totally optional, always appreciated.
+        </p>
+        <a class="btn btn--outline-light" href="{{links.donate}}" target="_blank" rel="noopener">
+          Donate <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="shopping-helps" class="block block--white" aria-labelledby="helps-title">
+      <div class="wrap">
+        <p class="kicker kicker--blue">The 5% Back to Schools Program</p>
+        <h2 id="helps-title" class="section-title">Don't forget the school ID.</h2>
+        <p class="lead">
+          Give this ID every time you pay — to the cashier in any store, or on a
+          phone order at 1-800-GO-DEPOT — and {{school.nameShort}} earns credits worth 5% of your
+          school-supply purchase. It works all year long, not just at back-to-school.
+        </p>
+        <div class="od-id-card">
+          <p class="od-id-card__label">{{school.nameShort}}'s 5% Back to Schools ID</p>
+          <p class="od-id-card__number">{{fundraising.officeDepotId}}</p>
+          <button type="button" class="od-id-card__copy" data-copy="{{fundraising.officeDepotId}}" hidden>Copy ID</button>
+        </div>
+        <p class="disclosure">
+          Basic school and office supplies qualify — paper, pens, binders, crayons, and
+          nearly everything on these lists. Technology (like headphones), ink &amp;
+          toner, and gift cards don't. Credits arrive quarterly as an Office Depot card
+          the school spends on free supplies.
+        </p>
+        <p class="disclosure">
+          Heads up: the ID has to be given <strong>when you pay</strong> — orders
+          placed at officedepot.com can't be credited (online checkout has no ID
+          field, and stores can't add it after a purchase). Use the item links to
+          find what you need, then buy in store.
+        </p>
+      </div>
+    </section>
+  </main>

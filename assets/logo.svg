@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Placeholder logo">
+  <circle cx="100" cy="100" r="96" fill="#2F67B2"/>
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <text x="100" y="118" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="52" font-weight="800" fill="#ffffff">PTA</text>
+</svg>

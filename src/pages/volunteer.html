@@ -1,0 +1,97 @@
+---
+title: Volunteer — {{org.name}}
+description: How to volunteer at {{school.name}} — get cleared by the district, then sign up for classroom, field trip, and event shifts.
+nav: volunteer
+---
+  <main id="main">
+
+    <!-- ============ HEAD (white) ============ -->
+    <section class="block block--white" aria-labelledby="volunteer-title">
+      <div class="wrap">
+        <p class="kicker kicker--blue">Volunteer</p>
+        <h1 id="volunteer-title" class="section-title">Lend a hand at {{school.nameShort}}.</h1>
+        <p class="lead">
+          Classrooms, field trips, and {{org.abbrev}} events all run on family volunteers.
+          Most districts approve every volunteer first, so
+          <strong>apply now and you'll be ready when you're needed</strong>.
+          After that, signing up for a shift takes a minute.
+        </p>
+        <p class="hero__actions" style="justify-content: flex-start; margin-top: 1.6rem;">
+          <!-- Replace both links with your district's application and your signup tool. -->
+          <a class="btn btn--blue" href="{{school.website}}" target="_blank" rel="noopener">
+            Volunteer application <span aria-hidden="true">↗</span>
+          </a>
+          <a class="btn btn--green" href="mailto:{{org.volunteerEmail}}">
+            Ask about open shifts <span aria-hidden="true">✉</span>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS (blue) ============ -->
+    <section id="how-it-works" class="block block--blue" aria-labelledby="how-title">
+      <div class="wrap">
+        <p class="kicker kicker--onblue">How It Works</p>
+        <h2 id="how-title" class="section-title section-title--light">Three steps, and the first two are one-time.</h2>
+
+        <div class="ways ways--stack">
+          <div class="way">
+            <span class="way__num">01</span>
+            <h3>Apply</h3>
+            <p>[Replace: how a parent applies to volunteer in your district, including any training or background check and how long it takes.]</p>
+            <a class="way__link" href="{{school.website}}" target="_blank" rel="noopener">Volunteer application <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="way">
+            <span class="way__num">02</span>
+            <h3>Get approved</h3>
+            <p>[Replace: how approval is confirmed, and how long it stays valid.]</p>
+          </div>
+          <div class="way">
+            <span class="way__num">03</span>
+            <h3>Sign up for events</h3>
+            <p>[Replace: where your school posts volunteer signups.]</p>
+            <a class="way__link" href="mailto:{{org.volunteerEmail}}">Email the coordinator <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ON THE DAY + QUESTIONS (green) ============ -->
+    <section id="on-the-day" class="block block--green" aria-labelledby="day-title">
+      <div class="wrap">
+        <p class="kicker kicker--ongreen">On the Day</p>
+        <h2 id="day-title" class="section-title section-title--light">Check in at the office.</h2>
+        <p class="lead lead--light lead--wide">
+          [Replace: what a volunteer does on arrival, such as checking in at the
+          front office with photo ID and picking up a name badge.]
+        </p>
+
+        <div class="connect-group">
+          <h3 class="connect-group__title">Questions?</h3>
+          <ul class="connect-grid" aria-label="Volunteer contacts and resources">
+          <li>
+            <a class="connect-card" href="mailto:{{org.volunteerEmail}}">
+              <span class="connect-card__icon" aria-hidden="true">✉</span>
+              <span class="connect-card__body">
+                <span class="connect-card__name">{{org.abbrev}} Volunteer Coordinator</span>
+                <span class="connect-card__meta">{{org.volunteerEmail}}</span>
+              </span>
+              <span class="connect-card__arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a class="connect-card" href="{{school.website}}" target="_blank" rel="noopener">
+              <span class="connect-card__icon" aria-hidden="true">🏫</span>
+              <span class="connect-card__body">
+                <span class="connect-card__name">School website</span>
+                <span class="connect-card__meta">{{school.website|host}}</span>
+              </span>
+              <span class="connect-card__arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>

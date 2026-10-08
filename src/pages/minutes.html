@@ -1,0 +1,53 @@
+---
+title: Meeting Minutes — {{org.name}}
+description: Minutes from {{org.nameShort}} monthly meetings. Read what the board discussed, voted on, and funded.
+nav: minutes
+---
+  <main id="main">
+
+    <!-- ============ HEAD (white, brief) ============ -->
+    <section class="block block--white" aria-labelledby="minutes-title">
+      <div class="wrap">
+        <p class="kicker kicker--blue">{{org.abbrev}} Records</p>
+        <h1 id="minutes-title" class="section-title">Meeting minutes</h1>
+        <p class="lead">
+          Notes from our monthly meetings &mdash; what we discussed, what we voted on,
+          and where the money went. Missed a meeting, or just curious what your {{org.abbrev}} is
+          up to? Start here.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ THE MINUTES (blue) ============ -->
+    <section class="block block--blue" aria-labelledby="minutes-year">
+      <div class="wrap">
+        <p class="kicker kicker--onblue">Minutes</p>
+
+        <!-- Built from content/minutes.json — add a line there, not here. -->
+        <!-- minutes-list -->
+      </div>
+    </section>
+
+    <!-- ============ HOW THIS WORKS (white) ============ -->
+    <section class="block block--white" aria-labelledby="minutes-how">
+      <div class="wrap">
+        <p class="kicker kicker--blue">Good to know</p>
+        <h2 id="minutes-how" class="section-title">Come see how it works.</h2>
+        <p class="lead lead--wide">
+          Minutes go up once they&rsquo;re approved at the following month&rsquo;s
+          meeting, so there&rsquo;s usually about a month&rsquo;s lag between a meeting
+          and its notes appearing here.
+        </p>
+        <p class="lead lead--wide">
+          The {{org.abbrev}} meets the {{meetings.day}} of every month, September through June,
+          {{meetings.time}}, in the cafeteria and on {{meetings.online}}. Voting membership is
+          open to every {{school.nameShort}} parent and guardian, and there are no dues.
+          You&rsquo;re welcome to come share an idea or just listen in.
+        </p>
+        <p class="hero__actions" style="justify-content: flex-start; margin-top: 1.6rem;">
+          <a class="btn btn--blue" href="/calendar">See upcoming meetings</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
